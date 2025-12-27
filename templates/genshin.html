@@ -1,0 +1,31 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block link %} <link rel="stylesheet" href="{% static 'genshin.css'%}">  {% endblock %}
+{% block titulo %}Genshin Impact {% endblock%}
+
+{% block main%}
+<section>
+    <h1>Bienvenido {{name}}</h1>
+
+    {%if personajes %}
+    <ul>
+        {% for personaje in personajes %}
+        <li>{{ personaje }}</li>
+        {% endfor %}
+    </ul>
+    {% else %}
+    <h2>No hay personajes cargados</h2>
+    {% endif %} 
+
+<div class="parent">
+    <div class="div1"><img src="{% static 'image/Hutao.jpg' %}" alt=""></div>
+    <div class="div2"><img src="{% static 'image/Raiden.jpg' %}" alt=""></div>
+    <div class="div3"><img src="{% static 'image/Keching.jpg' %}" alt=""></div>
+    <div class="div4"><img src="{% static 'image/Citlali.jpg' %}" alt=""></div>
+</div>
+    
+</section>
+{% endblock %}
+
+
+

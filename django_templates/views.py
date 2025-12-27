@@ -3,9 +3,15 @@ from django.shortcuts import render
 def home(request):
     return render(request,'home.html',{})
 
-def logout(request, name):
-    context = {'name' : name}
-    return render(request,'logout.html',context)
+def genshin(request, name):
+
+    personajes = ['Hutao','Raiden Shogun','Keching','Citlali'] 
+    
+    context = {'name' : name,
+               'personajes' : personajes
+               }
+    
+    return render(request,'genshin.html',context)
 
 def login(request, nombre, cargo):
 
