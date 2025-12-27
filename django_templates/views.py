@@ -17,3 +17,14 @@ def login(request, nombre, cargo):
     }
 
     return render(request,'login.html',context)
+
+def usuarios(request, nombre, cargo):
+    sistemas = ['Kali Linux','Windows Server','Ubuntu serve','MacOs']
+
+    context = {
+        'nombre' : nombre,
+        'cargo' : cargo,
+        'sistemas' : sistemas
+    }
+
+    return render(request,'usuario.html',context)
