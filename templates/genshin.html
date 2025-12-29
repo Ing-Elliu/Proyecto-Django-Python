@@ -1,7 +1,7 @@
 {% extends "layouts/base.html" %}
 {% load static %}
 {% block link %} <link rel="stylesheet" href="{% static 'genshin.css'%}">  {% endblock %}
-{% block titulo %}Genshin Impact {% endblock%}
+{% block titulo %} <title>Genshin Impact</title> {% endblock%}
 
 {% block main%}
 <section>
@@ -18,10 +18,10 @@
     {% endif %} 
 
 <div class="parent">
-    <div class="div1"><img src="{% static 'image/Hutao.jpg' %}" alt=""></div>
-    <div class="div2"><img src="{% static 'image/Raiden.jpg' %}" alt=""></div>
-    <div class="div3"><img src="{% static 'image/Keching.jpg' %}" alt=""></div>
-    <div class="div4"><img src="{% static 'image/Citlali.jpg' %}" alt=""></div>
+    <div class="div1"><img src="{% static 'image/Hutao.jpg' %}" alt="Hutao"></div>
+    <div class="div2"><img src="{% static 'image/Raiden.jpg' %}" alt="Shogun Raiden"></div>
+    <div class="div3"><img src="{% static 'image/Keching.jpg' %}" alt="Keching"></div>
+    <div class="div4"><img src="{% static 'image/Citlali.jpg' %}" alt="Citlali"></div>
 </div>
     
 </section>

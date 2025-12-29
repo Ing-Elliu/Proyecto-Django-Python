@@ -1,0 +1,27 @@
+{% extends "layouts/base.html" %}
+{% load static %}
+{% block titulo %} <title>Wutering Waves</title> {% endblock %}
+{% block link %} <link rel="stylesheet" href="{%static 'style.css'%}"> {% endblock %}
+
+{% block main %}
+
+{% if personajes %}
+<ul>
+    {% for personaje in personajes %}
+    <li>
+        {{personaje}}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No hay nombres de los personajes</p>
+{% endif %}
+
+<div class="parent">
+    <div class="div1"><img src="{%static 'image/Carlotta.jpg'%}" alt="Carlotta"></div>
+    <div class="div2"><img src="{%static 'image/Lupa.jpg'%}" alt="Lupa"></div>
+    <div class="div3"><img src="{%static 'image/Phrolova.jpg'%}" alt="Phrolova"></div>
+    <div class="div4"><img src="{%static 'image/iuno.jpg'%}" alt="Iuno" class="rotate-90"></div> 
+</div>
+
+{% endblock %}

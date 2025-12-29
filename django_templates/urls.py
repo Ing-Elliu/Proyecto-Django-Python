@@ -20,8 +20,8 @@ from . import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/',views.home, name='home_1'),
-    path('home/<str:nombre>/<str:cargo>/',views.login,name='login'),
-    path('logout/<str:name>/',views.genshin,name='genshin'),
-    path('user/<str:nombre>/<str:cargo>/',views.usuarios,name='usuarios')
+    path('',views.home, name='home'),
+    path('juego/hokai_star_rail/',views.hokai_star_rail,name='hokai_star_rail'),
+    path('juego/genshin_impact/',views.genshin_impact,name='genshin_impact'),
+    path('juego/wutering_waves/',views.wutering_waves,name='wutering_waves')
 ]

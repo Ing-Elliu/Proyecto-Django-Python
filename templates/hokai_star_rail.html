@@ -1,0 +1,31 @@
+{% extends 'layouts/base.html' %}
+{% load static %}
+{% block link %} <link rel="stylesheet" href="{% static 'hokai_star_rail.css' %}"> {% endblock %}
+{% block titulo %} <title>Hokai Star Rail</title> {% endblock %}
+
+{% block main %}
+
+{% if personajes %}
+<ul>
+    {% for personaje in personajes %}
+    <li>
+        {{personaje}}
+    </li>
+    {% endfor %}
+</ul>
+{% else %}
+<p>No hay nombres de los personajes</p>
+{% endif %}
+
+<section>
+    
+<div class="parent">
+    <div class="div1"><img class="center-top" src="{% static 'image/hokai_star_rail/Evernigth.jpg' %}" alt="Evernigth"></div>
+    <div class="div2"><img class="center-top" src="{% static 'image/hokai_star_rail/Robin.jpg' %}" alt="Robin"></div>
+    <div class="div3"><img class="center-top" src="{% static 'image/hokai_star_rail/Sparkle.jpg' %}" alt="Sparkle"></div>
+    <div class="div4"><img src="{% static 'image/hokai_star_rail/Cyrene.jpg ' %}"  alt="Cyrene"></div>
+</div>
+    
+</section>
+
+{% endblock %}

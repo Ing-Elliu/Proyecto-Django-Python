@@ -3,34 +3,29 @@ from django.shortcuts import render
 def home(request):
     return render(request,'home.html',{})
 
-def genshin(request, name):
+def genshin_impact(request):
 
     personajes = ['Hutao','Raiden Shogun','Keching','Citlali'] 
-    
-    context = {'name' : name,
+    context = {
                'personajes' : personajes
                }
     
     return render(request,'genshin.html',context)
 
-def login(request, nombre, cargo):
+def hokai_star_rail(request):
 
-    tecnologias = ['Python','Django','Flask','PhP','Laravel']
+    personajes = ['Evernigth','Sparkle','Cyrene','Robin']
     context = {
-        'Nombre' : nombre,
-        'Cargo' : cargo,
-        'tecnologias' : tecnologias
+        'personajes' : personajes
     }
 
-    return render(request,'login.html',context)
+    return render(request,'hokai_star_rail.html',context)
 
-def usuarios(request, nombre, cargo):
-    sistemas = ['Kali Linux','Windows Server','Ubuntu serve','MacOs']
+def wutering_waves(request):
 
+    personajes = ['Carlotta','Lupa','Phrolova','Iuno']
     context = {
-        'nombre' : nombre,
-        'cargo' : cargo,
-        'sistemas' : sistemas
+        'personajes' : personajes
     }
 
-    return render(request,'usuario.html',context)
+    return render(request,'wutering_waves.html',context)
