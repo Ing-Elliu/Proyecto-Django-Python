@@ -15,7 +15,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.contrib import admin
-from django.urls import path
+from django.urls import path,include
 from . import views
 
 urlpatterns = [
@@ -23,5 +23,8 @@ urlpatterns = [
     path('',views.home, name='home'),
     path('juego/hokai_star_rail/',views.hokai_star_rail,name='hokai_star_rail'),
     path('juego/genshin_impact/',views.genshin_impact,name='genshin_impact'),
-    path('juego/wutering_waves/',views.wutering_waves,name='wutering_waves')
+    path('juego/wutering_waves/',views.wutering_waves,name='wutering_waves'),
+
+    path('supabase/',include('app_supabase.urls')),
+    path('personajes/',include('app_personajes.urls')),
 ]
