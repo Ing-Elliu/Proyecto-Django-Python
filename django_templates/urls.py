@@ -27,4 +27,5 @@ urlpatterns = [
 
     path('supabase/',include('app_supabase.urls')),
     path('personajes/',include('app_personajes.urls')),
+    path('blog/',include('app_blog.urls'))
 ]
